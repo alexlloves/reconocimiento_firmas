@@ -1,0 +1,16 @@
+name: reconocimiento_firmas
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12.2
+  - numpy
+  - opencv
+  - matplotlib
+  - pytesseract
+  - pyzbar
+  - pillow
+  - json
+  - pip
+  - pip:
+      - pytesseract  # Esto puede ser necesario para instalar pytesseract desde pip, en caso de que no se instale adecuadamente con conda
