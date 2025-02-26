@@ -26,12 +26,6 @@ class QrcodeDecoder:
     def get_decoded_results(self):
         return [self.parse_decoded_object(obj) for obj in self.decoded_objects]
     
-    def get_label_data(self, label):
-        for obj in self.get_decoded_results():
-            if obj["datos"] == label:
-                return obj
-        return None
-    
     def get_all_labels(self):
         return [obj["datos"] for obj in self.get_decoded_results()]
 
