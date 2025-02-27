@@ -12,5 +12,6 @@ dependencies:
   - pillow
   - json
   - pip
+  - loguru
   - pip:
       - pytesseract  # Esto puede ser necesario para instalar pytesseract desde pip, en caso de que no se instale adecuadamente con conda
