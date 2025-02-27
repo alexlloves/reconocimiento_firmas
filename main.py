@@ -3,6 +3,7 @@ import cv2 as cv
 from matplotlib import pyplot as plt
 import pytesseract
 import json
+import loguru as logger
 from QrcodeDecoder import QrcodeDecoder
 
 info_qr = QrcodeDecoder("Escaneo.jpg")
@@ -55,8 +56,8 @@ for i in names:
         values_names[i]="Firmado"
     else:
         values_names[i]="No firmado"
-
     y += 100  # Incrementar y en cada iteración
     
 print(info_qr.get_all_labels())
 print(json.dumps(values_names, indent=4))
+logger.logger.info("Acabado con éxito")
