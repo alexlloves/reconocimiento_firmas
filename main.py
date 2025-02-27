@@ -3,7 +3,9 @@ import cv2 as cv
 from matplotlib import pyplot as plt
 import pytesseract
 import json
+from QrcodeDecoder import QrcodeDecoder
 
+info_qr = QrcodeDecoder("Escaneo.jpg")
 image = cv.imread("Escaneo.jpg")
 
 
@@ -56,4 +58,5 @@ for i in names:
 
     y += 100  # Incrementar y en cada iteración
     
+print(info_qr.get_all_labels())
 print(json.dumps(values_names, indent=4))
